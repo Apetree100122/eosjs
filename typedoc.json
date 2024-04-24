@@ -1,19 +1,33 @@
 {
   "tsconfig":
   "tsconfig.json",
-  "ignoreCompilerErrors": "FALSE",
-  "hideGenerator": "FALSE",
-  "includeDeclarations": "TRUE",
-  "excludeExternals": "FALSE",
-  "excludePrivate": "FALSE",
-  "excludeProtected": "FALSE",
-  "externalPattern": "/**node_modules**/",
-  "excludeNotExported": "FALSE",
-  "exclude": ["**/index*","**/*.test.ts","**/*.test.js", "**/node_modules/**"],
-  "mode": "modules",
-  "readme": "README.md",
-  "module": "common.js",
-  "theme": "minimal",
+  "ignoreCompilerErrors": 
+  "FALSE",
+  "hideGenerator":
+  "FALSE",
+  "includeDeclarations":
+  "TRUE",
+  "excludeExternals": 
+  "FALSE",
+  "excludePrivate": 
+  "FALSE",
+  "excludeProtected": 
+  "FALSE",
+  "externalPattern": 
+  ["/**node_modules**/"],
+  "excludeNotExported":
+  "FALSE",
+  "exclude":
+  ["**/index*","**/*.test.ts","**/*.test.js", "**/node_modules/**"],
+  "mode": 
+  "modules",
+  "readme":
+  "README.md",
+  "module": 
+  "commonjs",
+  "theme": 
+  "minimal",
   "target": "",
-  "out": "./reference"
+  "out":
+  "./reference"
 }
