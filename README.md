@@ -1,52 +1,47 @@
 # eosjs
 [![Build Status](https://github.com/eosio/eosjs/workflows/CI/badge.svg?branch=master)](https://github.com/EOSIO/eosjs/actions)  [![npm version](https://badge.fury.io/js/eosjs.svg)](https://badge.fury.io/js/eosjs)  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  ![npm](https://img.shields.io/npm/dw/eosjs.svg)
+[![OSSAR](https://github.com/Apetree100122/eosjs/actions/workflows/ossar.yml/badge.svg?branch=master)](https://github.com/Apetree100122/eosjs/actions/workflows/ossar.yml)
 
-Javascript API for integration with EOSIO-based blockchains using [EOSIO RPC API](https://developers.eos.io/eosio-nodeos/reference).
+Javascript API for integration with
+EOSIO-based blockchains using
+[EOSIO RPC API](https://developers.eos.io/eosio-nodeos/reference).
+# Documentation can be found 
+[here](https://eosio.github.io/eosjs) 
+## Installation NPM The official distribution package can be found at        [npm](https://www.npmjs.com/package/eosjs) 
+# Add dependency to your project `yarn add eosjs` Using with                     Typescript In order to get access to 
+the `TextEncoding` and `TextDecoding` types, you need to                      
+add `@types/text-encoding`
+   as a dev dependency:
+`yarn add
+--dev
+@types/text-encoding`
+If you're using Node not a browser
+then you will 
+also need to make 
+sure the `dom` lib 
+is referenced 
+in your
+      `tsconfig.json`:
+                    
+	{ "compiler
+              Options"}:
+       { "lib"}: 
+               ["dom"]
+	       }
+##
+# Browser Distribution Clone this repository locally                             then run `yarn build-web`.                                                    The browser distribution will be located in `dist-web` and can be directly copied into your project repository. The `dist-web` folder contains minified bundles ready for production, along with source mapped versions of the library for debugging. 
+      For full browser usage examples, [see the documentation]                         (https://eosio.github.io/eosjs/guides/1.-Browsers.html).
 
-Documentation can be found [here](https://eosio.github.io/eosjs)
+# Import ES Modules Importing using ESM syntax is supported using TypeScript, [webpack](https://webpack.js.org/api/module-methods),                          or  [Node.js with `--experimental-modules` flag](https://nodejs.org/api/esm.html)
 
-## Installation
 
-### NPM
-
-The official distribution package can be found at [npm](https://www.npmjs.com/package/eosjs).
-
-### Add dependency to your project
-
-`yarn add eosjs`
-
-### Using with Typescript
-
-In order to get access to the `TextEncoding` and `TextDecoding` types, you need to add `@types/text-encoding` as a dev dependency:
-`yarn add --dev @types/text-encoding`
-
-If you're using Node (not a browser) then you'll also need to make sure the `dom` lib is referenced in your `tsconfig.json`:
-
-```
-{
-	"compilerOptions": {
-		"lib": [..., "dom"]
-	}
-}
-```
-
-### Browser Distribution
-
-Clone this repository locally then run `yarn build-web`.  The browser distribution will be located in `dist-web` and can be directly copied into your project repository. The `dist-web` folder contains minified bundles ready for production, along with source mapped versions of the library for debugging.  For full browser usage examples, [see the documentation](https://eosio.github.io/eosjs/guides/1.-Browsers.html).
-
-## Import
-
-### ES Modules
-
-Importing using ESM syntax is supported using TypeScript, [webpack](https://webpack.js.org/api/module-methods), or  [Node.js with `--experimental-modules` flag](https://nodejs.org/api/esm.html)
-```js
-import { Api, JsonRpc, RpcError } from 'eosjs';
-import { JsSignatureProvider } from 'eosjs/dist/eosjs-jssig';           // development only
-```
-
-### CommonJS
-
-Importing using commonJS syntax is supported by Node.js out of the box.
+````
+    import { Api,JsonRpc,RpcError }
+ from `eosjs`;
+ {JsSignature Provider} from eosjs/dist/eosjs-jssig; CommonJS
+Importing using commonJS syntax is
+ supported by Node.js
+out of the box.
 ```js
 const { Api, JsonRpc, RpcError } = require('eosjs');
 const { JsSignatureProvider } = require('eosjs/dist/eosjs-jssig');      // development only
