@@ -1,10 +1,10 @@
 name: CI
 on:
   push:
-    branches-ignore:
+    branches:
       - develop
+      -[*/*]
   pull_request:
-
 jobs:
   ci:
     name: CI
@@ -100,5 +100,5 @@ uses: actions/setup-node@v4.0.2
     # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
     cache: # optional
     # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
-    cache-dependency-path: # optional
-          
+    cache-dependency-path:
+    # optional
